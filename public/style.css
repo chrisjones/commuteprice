@@ -1,0 +1,34 @@
+body {
+  text-align: center;
+  margin: 0 auto;
+  width: 777px;
+  background: url("/images/background.jpg") repeat;
+}
+#container {
+  width: 777px;
+  text-align: left;
+}
+#header {
+  height: 100px;
+}
+#main_left {
+  background: url("/images/left_container.jpg") no-repeat;
+  height: 492px;
+  width: 61px;
+  float: left;
+}
+#main_content {
+  background: url("/images/vertical_container.jpg") repeat-x;
+  height: 492px;
+  width: 660px;
+  float: left;
+}
+#main_right {
+  background: url("/images/right_container.jpg") no-repeat;
+  height: 492px;
+  width: 56px;
+  float: left;
+}
+#footer {
+  text-align: center;
+}
