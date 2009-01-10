@@ -1,0 +1,27 @@
+%html
+  %head
+    %title commute price - how much does it cost you to commute?
+    %link{ :rel => 'stylesheet', :href => '/style.css', :type => "text/css"}
+  %body
+    #container    
+      #header
+        #title 
+        #top_menu
+          %ul
+            %li
+              %a{ :href => "index" } Home
+            %li 
+              %a{ :href => "about" } About
+            %li 
+              %a{ :href => "mailto:chris@nookhosting.com" } Contact
+      #cleardiv
+      #main
+        #main_left
+          &nbsp;
+        #main_content
+          = yield
+        #main_right
+          &nbsp;
+      #cleardiv
+      #footer
+        %p &copy;2009 Chris "I'll pimp your website in a heartbeat" Jones
