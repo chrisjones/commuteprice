@@ -1,15 +1,15 @@
 body {
   text-align: center;
   margin: 0 auto;
-  width: 777px;
+  width: 930px;
   background: url("/images/background.jpg") repeat;
 }
 #container {
-  width: 777px;
+  width: 930px;
   text-align: left;
 }
 #header {
-  height: 100px;
+  height: 50px;
 }
 #main_left {
   background: url("/images/left_container.jpg") no-repeat;
@@ -20,7 +20,7 @@ body {
 #main_content {
   background: url("/images/vertical_container.jpg") repeat-x;
   height: 492px;
-  width: 660px;
+  width: 813px;
   float: left;
 }
 #main_right {
@@ -29,7 +29,16 @@ body {
   width: 56px;
   float: left;
 }
+#cleardiv {
+  clear: both;
+}
 #footer {
-  text-align: center;
+  position: absolute;
+  z-index: 1;
+  width: 930px;
+  margin-top: -50px;
+}
+#footer p {
+  text-align: center;	
   color: white;
 }
