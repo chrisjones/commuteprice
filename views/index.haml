@@ -1,1 +1,49 @@
-Hello World
+#left_pane
+  %form#form{:method=>'POST', :action => 'calculate'}
+    %fieldset
+      %label
+        Origin:
+        %br/
+      %input#origin{:type => 'text', :name => 'origin', :value => params[:origin], :size => 26 }
+    %fieldset
+      %label
+        Destination:
+        %br/  
+      %input#dest{:type => 'text', :name => 'dest', :value => params[:dest], :size => 26 }
+    %fieldset
+      %label
+        Miles per Gallon:  
+        %br/
+      %input#mpg{:type => 'text', :name => 'mpg', :value => params[:mpg], :size => 5 }
+    %fieldset
+      %label 
+        Price per Gallon: 
+        %br/ 
+      %input#ppg{:type => 'text', :name => 'ppg', :value => params[:ppg], :size => 5 }
+    %fieldset
+      %center
+        %input#submit{:type => 'submit', :value => 'Calculate' }
+  %br/
+  %p
+    %fieldset
+      %label
+        One Way =
+      #ammount
+        $4.27
+    %fieldset
+      %label
+        Round Trip =
+      #ammount
+        $8.54
+    %fieldset
+      %label
+        Weekly Commute =
+      #ammount
+        $42.70
+    %fieldset
+      %label
+        Monthly Commute =
+      #ammount
+        $170.80
+#right_pane
+  &nbsp;

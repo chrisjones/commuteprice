@@ -1,0 +1,37 @@
+#left_pane {
+  margin-top: 60px;
+  margin-left: 8px;
+  font-size: 20px;
+  width: 325px;	
+  float: left;
+}
+#left_pane form {
+  margin: 20px 0px;
+  padding: 0px;
+}
+#left_pane fieldset {
+  border: 0;
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+#left_pane label {
+  float: left;
+}
+#left_pane input {
+  float: right;
+  font-size: 12px;
+}
+#left_pane #ammount {
+  float: right;
+}
+#right_pane {
+  margin-top: 60px;
+  margin-left: 10px;
+  padding-left: 12px;
+  background-color: gray;
+  height: 370px;
+  width: 450px;
+  float: left;
+  border: 1px solid black;
+}
