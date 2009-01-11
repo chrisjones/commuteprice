@@ -1,7 +1,6 @@
 # commuteprice.rb
 require 'rubygems'
 require 'sinatra'
-require 'ym4r'
 
 get '/' do
   haml :index
