@@ -76,8 +76,9 @@ body {
 }
 #footer {
   position: absolute;
-  padding-top: 490px;
+  margin-top: 505px;
   width: 930px;
+  z-index: -1;
 }
 #footer p {
   text-align: center;	

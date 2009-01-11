@@ -1,9 +1,24 @@
-%html
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %title commute price - how much does it cost you to commute?
     %link{ :rel => 'stylesheet', :href => '/layout.css', :type => "text/css"}
     %link{ :rel => 'stylesheet', :href => '/style.css', :type => "text/css"}
-  %body
+
+    /* ABQIAAAAYc-qzzrfehTs2PozZtzvuBSwEuKCZWKb4AgSPMhy1BvFRnlBCRQJiwSuGpnkI-tnsFrv0bi1B25xng  (actual key) 
+
+    %script{:type => "text/javascript", :src => "http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAnfs7bKE82qgb3Zc2YyS-oBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxSySz_REpPq-4WZA27OwgbtyR3VcA"}
+    %script{:type => "text/javascript"}
+      function load() {
+      if (GBrowserIsCompatible()) {
+      var map = new GMap2(document.getElementById("map"));
+      map.setCenter(new GLatLng(40.513799, -97.470703), 3);
+      map.addControl(new GSmallMapControl());  
+      map.addControl(new GMapTypeControl());   
+      }
+      }
+
+  %body{:onload => "load()", :onunload => "GUnload()"}
     #container    
       #header
         #title 
