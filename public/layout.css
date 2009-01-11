@@ -76,8 +76,7 @@ body {
 }
 #footer {
   position: absolute;
-  padding-top: 465px;
-  z-index: 1;
+  padding-top: 490px;
   width: 930px;
 }
 #footer p {
