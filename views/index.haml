@@ -1,5 +1,5 @@
 #left_pane
-  %form#form{:method=>'POST', :action => 'calculate' }
+  %form#form{:onsubmit => "showDirections(this.origin.value,this.dest.value,this.mpg.value,this.ppg.value); return false" }
     %fieldset
       %label
         Origin:
@@ -28,21 +28,21 @@
       %label
         One Way Commute =
       #ammount
-        $4.27
+        #one_way
     %fieldset
       %label
         Round Trip Commute =
       #ammount
-        $8.54
+        #round_trip
     %fieldset
       %label
         Weekly Commute =
       #ammount
-        $42.70
+        #weekly
     %fieldset
       %label
         Monthly Commute =
       #ammount
-        $170.80
+        #monthly
 #right_pane
   #map{:style => "width:450px;height:370px"}
