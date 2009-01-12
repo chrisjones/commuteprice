@@ -1,0 +1,87 @@
+body {
+  text-align: center;
+  margin: 0 auto;
+  width: 930px;
+  background: url("/images/background.jpg") repeat;
+  font-family: "Gill Sans", Arial, Helvetica, sans-serif;
+}
+#container {
+  width: 930px;
+  text-align: left;
+}
+#header {
+  margin: 20px 0px 0px 62px;
+  padding: 0px;
+  height: 36px;
+  z-index: 1;
+  position: absolute;
+}
+#title {
+  background: url("/images/title.png") no-repeat;
+  float: left;
+  width: 252px;
+  height: 36px;
+}
+#top_menu {
+  float: left;
+  margin-left: 39px;	
+  padding: 5px 0px 0px 30px;
+}
+#top_menu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#top_menu li {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;	
+}
+#top_menu a, #top_menu a:link, #top_menu a:visited {
+  color: white;	
+  text-decoration: none;
+  padding: 20px;
+}
+#top_menu a:active {
+  border-bottom: 1px dotted white;
+}
+#main {
+  position: absolute;
+  padding-top: 25px;
+  width: 930px;	
+}
+#main_left {
+  background: url("/images/left_container.jpg") no-repeat;
+  height: 492px;
+  width: 61px;
+  float: left;
+}
+#main_content {
+  background: url("/images/vertical_container.jpg") repeat-x;
+  height: 492px;
+  width: 813px;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+#main_right {
+  background: url("/images/right_container.jpg") no-repeat;
+  height: 492px;
+  width: 56px;
+  float: left;
+}
+#cleardiv {
+  clear: both;
+}
+#footer {
+  position: absolute;
+  margin-top: 505px;
+  width: 930px;
+  z-index: -1;
+}
+#footer p {
+  text-align: center;	
+  color: white;
+  font-size: 12px;
+}
