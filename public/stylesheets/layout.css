@@ -10,7 +10,7 @@ body {
   text-align: left;
 }
 #header {
-  margin: 20px 0px 0px 62px;
+  margin: 20px 0px 0px 64px;
   padding: 0px;
   height: 36px;
   z-index: 1;
@@ -19,13 +19,12 @@ body {
 #title {
   background: url("/images/title.png") no-repeat;
   float: left;
-  width: 252px;
+  width: 289px;
   height: 36px;
 }
 #top_menu {
   float: left;
-  margin-left: 39px;	
-  padding: 5px 0px 0px 30px;
+  padding: 4px 0px 0px 15px;
 }
 #top_menu ul {
   list-style: none;
