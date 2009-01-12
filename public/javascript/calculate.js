@@ -48,52 +48,38 @@ function onGDirectionsLoad(){
 // The add-on code for draggable markers
 // Esa 2008
 //
-	var newMarkers = [];
-	var latLngs = [];
-	var icons = [];
+var newMarkers = [];
+var latLngs = [];
+var icons = [];
 	
-	// Note the 'addoverlay' GEvent listener added inside initialize() function
-
-	function onGDirectionsAddOverlay(){ 
-	// Remove the draggable markers from previous function call.
-	for (var i=0; i<newMarkers.length; i++) 
-	{map.removeOverlay(newMarkers[i]);
-	}
-
-	// Loop through the markers and create draggable copies
-	for (var i=0; i<=gdir.getNumRoutes(); i++) 
-		{
-		var originalMarker = gdir.getMarker(i);
-		latLngs[i] = originalMarker.getLatLng();
-		icons[i] = originalMarker.getIcon();
-		newMarkers[i] = new GMarker(latLngs[i],{icon:icons[i], draggable:true, title:'Draggable'});
-		map.addOverlay(newMarkers[i]);
-
-		// Get the new waypoints from the newMarkers array and call loadFromWaypoints by dragend
-		GEvent.addListener(newMarkers[i], "dragend", function()
-		  {
-		var points = [];
-		for (var i=0; i<newMarkers.length; i++) 
-			{
+function onGDirectionsAddOverlay(){ 
+  for (var i=0; i<newMarkers.length; i++) {
+	map.removeOverlay(newMarkers[i]);
+  }
+  for (var i=0; i<=gdir.getNumRoutes(); i++) {
+	var originalMarker = gdir.getMarker(i);
+	latLngs[i] = originalMarker.getLatLng();
+	icons[i] = originalMarker.getIcon();
+	newMarkers[i] = new GMarker(latLngs[i],{icon:icons[i], draggable:true, title:'Draggable'});
+	map.addOverlay(newMarkers[i]);
+	GEvent.addListener(newMarkers[i], "dragend", function() {
+	  var points = [];
+	  for (var i=0; i<newMarkers.length; i++) {
 		points[i]= newMarkers[i].getLatLng();
-			}
-		gdir.loadFromWaypoints(points);
-		  });
+	  }
+	  gdir.loadFromWaypoints(points);
+	});
+	copyClick(newMarkers[i],originalMarker);
+	map.removeOverlay(originalMarker);
+  }
 
-		//Bind 'click' event to original hidden marker
-		copyClick(newMarkers[i],originalMarker);
-		
-		// hide or remove the original marker
-		//originalMarker.hide();
-		map.removeOverlay(originalMarker);
-		}
-		
-		function copyClick(newMarker,oldMarker){
-		GEvent.addListener(newMarker, 'click', function()
-		  {GEvent.trigger(oldMarker,'click');
-		  });
-		}
+  function copyClick(newMarker,oldMarker) {
+	GEvent.addListener(newMarker, 'click', function() {
+	  GEvent.trigger(oldMarker,'click');
+	});
+  }
+}
+//
 // End of draggable markers code
 // Esa 2008
 ///////////////////////////////////////////////////////////////////////
-	}
