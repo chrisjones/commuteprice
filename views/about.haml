@@ -1,13 +1,24 @@
 #about
   %p
-    The idea behind MyCommuteCost.info 100% came from Brandon Morgado, twitter.com/leadingzero. My idea was to try to replicate his site, commutecost.com, using Ruby, Sintra, HAML, and Sass. Plus, the domain only cost me $1.19 on godaddy.
+    The idea behind MyCommuteCost.info 100% came from Brandon Morgado, 
+    %a{:href => 'http://twitter.com/leadingzero'} 
+      twitter.com/leadingzero
+    \. My idea was to try to replicate his site, 
+    %a{:href => "http://www.commutecost.com/"} commutecost.com
+    , using Ruby, Sintra, HAML, and Sass. Plus, the domain only cost me $1.19 on godaddy.
   %p
-    This site is open source, MIT license, and available on GitHub at github/topherjones/commuteprice/master.
+    This site is open source, MIT licensed, and available on  
+    %a{:href => 'http://github/chrisjones/commuteprice/tree/master'}  github
+    \.
   %p
     Contact me for any questions, comments, or just to yell at me.
   %br/
   Todo:
   %ul 
+    %li Figure out the dumb whitespace munching on HAML %a tags - see above
+    %li Figure out the Sass inheritance issues with the templates - defaulted to CSS for now
+    %li Figure out HAML partials to shorten index.haml
+    %li Add commas to costs if more than 3 digits
     %li Add last 10 prices in a javascript dropdown box below main content
     %li Screen scrape or store mpg for a year, make, model of car
     %li Screen scrape average gas for origin
