@@ -35,8 +35,8 @@ function handleErrors() {
 
 function onGDirectionsLoad(){ 
   var distance = gdir.getDistance().meters;
-  var x = 1609.344;
-  var cost = (distance/x) * (price/miles);
+  var metersPerMile = 1609.344;
+  var cost = (distance/metersPerMile) * (price/miles);
 
   document.getElementById("one_way").innerHTML = "$"+(Math.round(cost*100)/100).toFixed(2);
   document.getElementById("round_trip").innerHTML = "$"+(Math.round(cost*2*100)/100).toFixed(2);
