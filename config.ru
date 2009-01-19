@@ -3,7 +3,7 @@ require 'sinatra'
 
 Sinatra::Application.default_options.merge!(
   :run => false,
-  :environment => :production,
+  :environment => :production
 )
 
 require 'commuteprice.rb'
